@@ -1,0 +1,47 @@
+# Risk Stratification for Ischemic and Bleeding Events
+
+# Import necessary libraries
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report
+
+# Step 1: Load the datasets
+sheet1 = pd.read_csv("processed_sheet1.csv")
+sheet2 = pd.read_csv("processed_sheet2.csv")
+
+# Step 2: Merge the datasets
+data = pd.merge(sheet1, sheet2, left_on="Patient_ID", right_on="Follow_Up_Duration (months)", how="inner")
+
+# Step 3: Select features for risk stratification
+features = [
+    "Age", "Gender", "BMI", "Smoking_Status", "Hypertension", 
+    "Diabetes ", "Resting_Heart_Rate", "Heart_Rate_Variability", 
+    "Autonomic_Function_Score", "Genetic_Risk_Score", "Total_Cholesterol (mg/dL)"
+]
+X = data[features]
+
+# Step 4: Preprocess the data
+X = pd.get_dummies(X, drop_first=True)  # Convert categorical variables to numeric
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Step 5: Cluster patients into risk groups (low, moderate, high)
+kmeans = KMeans(n_clusters=3, random_state=42)
+data["Risk_Group"] = kmeans.fit_predict(X_scaled)
+
+# Step 6: Build a decision tree classifier to explain risk groups
+y = data["Risk_Group"]
+classifier = DecisionTreeClassifier(random_state=42)
+classifier.fit(X_scaled, y)
+
+# Step 7: Evaluate and save the results
+print("Decision Tree Classification Report:")
+print(classification_report(y, classifier.predict(X_scaled)))
+
+# Save the data with risk groups
+data.to_csv("risk_stratification_results.csv", index=False)
+
+print("Risk stratification completed. Results saved to 'risk_stratification_results.csv'.")
