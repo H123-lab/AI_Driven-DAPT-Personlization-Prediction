@@ -1,0 +1,6 @@
+| Model               | Outcome  | AUROC | CI_low | CI_high |
+| ------------------- | -------- | ----- | ------ | ------- |
+| LightGBM            | Ischemic | 0.84  | 0.82   | 0.86    |
+| LightGBM            | Bleeding | 0.82  | 0.79   | 0.85    |
+| Logistic Regression | Ischemic | 0.56  | -      | -       |
+| Logistic Regression | Bleeding | 0.80  | -      | -       |
