@@ -1,0 +1,18 @@
+Variable,Description,Type
+Age,Patient age at index PCI,Continuous
+Sex,Biological sex,Categorical
+BMI,Body mass index (kg/m²),Continuous
+Smoking_Status,Current former or never smoking,Categorical
+Hypertension,History of hypertension,Binary
+Diabetes,History of diabetes mellitus,Binary
+Multivessel_Disease,Presence of multivessel coronary artery disease,Binary
+Hemoglobin,Baseline hemoglobin level,Continuous
+Creatinine,Baseline serum creatinine level,Continuous
+Anticoagulant_Use,Concurrent anticoagulant therapy,Binary
+DAPT_Duration,Duration of dual antiplatelet therapy,Continuous
+Ischemic_Event,Composite ischemic outcome,Binary
+Bleeding_Event,BARC type 3 or type 5 bleeding outcome,Binary
+Follow_Up_Duration,Duration of follow-up after PCI,Continuous
+SHAP_Value,Feature contribution estimate from SHAP analysis,Continuous
+Predicted_Ischemic_Risk,Model-predicted ischemic risk probability,Continuous
+Predicted_Bleeding_Risk,Model-predicted bleeding risk probability,Continuous
