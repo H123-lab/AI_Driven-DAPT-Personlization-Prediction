@@ -1,0 +1,4 @@
+| Outcome  | Intercept | Slope | Brier Score |
+| -------- | --------- | ----- | ----------- |
+| Ischemic | 0.01      | 0.98  | 0.12        |
+| Bleeding | 0.02      | 0.95  | 0.10        |
