@@ -1,0 +1,4 @@
+| Strategy      | ICER      | QALY_gain | Cost_difference |
+| ------------- | --------- | --------- | --------------- |
+| AI-guided     | -         | +0.12     | -$450           |
+| Standard care | reference | baseline  | baseline        |
