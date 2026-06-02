@@ -1,0 +1,5 @@
+Outcome,Dataset,Calibration_Intercept,Calibration_Slope,Brier_Score
+Ischemic,Internal,0.02,0.98,0.12
+Ischemic,External,-0.01,1.01,0.14
+Bleeding,Internal,0.01,0.97,0.11
+Bleeding,External,-0.03,1.03,0.13
