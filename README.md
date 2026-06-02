@@ -1,80 +1,164 @@
-Project Overview
-This project focuses on analyzing and recommending Dual Antiplatelet Therapy (DAPT) duration based on patient-specific clinical data. The algorithm uses patient demographic, clinical, and risk-related metrics to provide personalized therapy recommendations. It aligns with the study objectives of optimizing treatment strategies and improving patient outcomes.
+# AI-Driven DAPT Personalization After PCI
 
-Key Objectives
-Data Integration: Merging multiple datasets (processed_sheet1.csv and processed_sheet2.csv) based on patient IDs to create a comprehensive dataset.
-Risk Stratification: Assessing bleeding and ischemia risks to tailor DAPT duration for individual patients.
-Visualization: Generating plots to visualize BMI distribution and other key metrics.
-Data Analysis: Creating summary statistics and splitting datasets into relevant parts for further analysis.
-Recommendation Generation: Providing evidence-based DAPT duration recommendations based on clinical data.
-Project Files
-The repository includes the following files:
+## Overview
 
-Input Files:
+This repository accompanies the study:
 
-processed_sheet1.csv: Contains demographic and baseline clinical information.
-processed_sheet2.csv: Contains risk-related information and additional metrics.
-Output Files:
+**"Explainable Artificial Intelligence for Personalized Dual Antiplatelet Therapy Risk Stratification Following Percutaneous Coronary Intervention: External Validation and Economic Evaluation."**
 
-merged_file.csv: The merged dataset combining input files.
-BMI_Distribution.png: A plot showing BMI distribution by gender.
-DAPT_recommendation_Result_Part1.csv: Split dataset focusing on demographic and baseline data.
-DAPT_recommendation_Result_Part2.csv: Split dataset focusing on DAPT duration and risk factors.
-DAPT_Recommendation_Final.csv: Final dataset with personalized DAPT recommendations.
-Summary_Statistics.csv: Summary statistics for all dataset columns.
-Algorithm Script:
+The project develops and externally validates an explainable machine-learning framework for individualized prediction of ischemic and bleeding risk among patients receiving dual antiplatelet therapy (DAPT) after percutaneous coronary intervention (PCI).
 
-DAPT_Recommendation_Algorithm.py: The main Python script performing all analyses and generating outputs.
-Features
-Dataset Merging:
-Ensures all relevant columns are included.
-Fills missing columns with placeholder values for consistency.
-BMI Distribution Visualization:
-Histogram with KDE (Kernel Density Estimation) plot for gender-based BMI analysis.
-Dataset Splitting:
-Separates merged data into Part 1 (demographic and baseline data) and Part 2 (DAPT and risk factors).
-Personalized Recommendations:
-DAPT duration is tailored based on bleeding and ischemia risks using an algorithmic approach.
-Summary Statistics:
-Provides a statistical overview of the dataset for academic reporting.
-How to Run the Algorithm
-Prerequisites:
+---
 
-Python 3.x installed on your local machine.
-Required Python libraries:
-pandas
-numpy
-matplotlib
-seaborn
-Steps:
+## Study Objectives
 
-Upload the input files (processed_sheet1.csv and processed_sheet2.csv) to your working directory.
-Run the script DAPT_Recommendation_Algorithm.py:
-bash
+The study aimed to:
 
-python DAPT_Recommendation_Algorithm.py
-Outputs will be generated in the working directory.
-Testing:
+* Develop an explainable machine-learning model for post-PCI risk stratification.
+* Predict both ischemic and major bleeding events.
+* Compare machine-learning performance with conventional clinical risk scores.
+* Evaluate model calibration and clinical utility.
+* Explore the potential economic implications of AI-guided DAPT personalization.
 
-You can also test the algorithm on Google Colab. Upload the input files and script, and execute the cells to validate outputs.
-Expected Outputs
-A merged dataset with complete patient data.
-Split datasets (Part 1 and Part 2) for targeted analysis.
-Visualized BMI distribution saved as a .png file.
-Final recommendations for DAPT duration in a CSV file.
-Summary statistics for academic documentation.
-Academic Relevance
-This project is aligned with ongoing research into personalized medicine and treatment optimization in cardiovascular care. It integrates real-world clinical data, applying data science methodologies to address critical healthcare challenges. The algorithm demonstrates the practical application of patient-specific data in tailoring therapy recommendations.
+---
 
-Future Scope
-Enhancing the algorithm to include additional risk factors.
-Expanding the dataset with more patient records for robust recommendations.
-Incorporating machine learning models to predict outcomes based on therapy recommendations.
-Limitations
-The recommendations are based solely on the provided datasets. Additional clinical validation is necessary before real-world implementation.
-Missing or incomplete data may affect the accuracy of analyses.
-License
-This project is licensed under the MIT License, allowing free use, modification, and distribution, provided the original authors are credited.
+## Study Cohorts
 
+### Development Cohort
+
+United Arab Emirates PCI cohort
+
+* n = 4,812 patients
+* Used for model development and internal validation
+
+### External Validation Cohort
+
+MIMIC-IV database
+
+* n = 3,406 patients
+* Used for independent external validation
+
+---
+
+## Outcomes
+
+### Composite Ischemic Events
+
+* Myocardial infarction
+* Ischemic stroke
+* Stent thrombosis
+* Cardiovascular death
+
+### Major Bleeding Events
+
+Defined according to:
+
+* BARC Type 3
+* BARC Type 5
+
+---
+
+## Models Evaluated
+
+### Primary Model
+
+* Weighted LightGBM
+
+### Benchmark Models
+
+* Logistic Regression
+* Random Forest
+* Neural Network
+
+---
+
+## Model Explainability
+
+Model interpretability was evaluated using:
+
+* SHapley Additive exPlanations (SHAP)
+
+Analyses included:
+
+* Global feature importance
+* Feature contribution assessment
+* Clinical plausibility evaluation
+
+---
+
+## Performance Evaluation
+
+Model performance was assessed using:
+
+* AUROC
+* Calibration plots
+* Calibration intercept
+* Calibration slope
+* Decision curve analysis
+* Internal cross-validation
+* Independent external validation
+
+---
+
+## Clinical Utility Assessment
+
+Clinical usefulness was evaluated using:
+
+* Risk stratification analyses
+* Decision curve analysis
+* Model-based clinical impact projections
+
+The study does not evaluate observed treatment effects and should be interpreted as predictive and hypothesis-generating.
+
+---
+
+## Economic Evaluation
+
+Exploratory health-economic analyses included:
+
+* Quality-adjusted life-years (QALYs)
+* Incremental cost-effectiveness ratios (ICERs)
+* Deterministic sensitivity analysis
+* Probabilistic sensitivity analysis
+* Monte Carlo simulation
+
+Economic findings are based on modeled projections and not prospective interventional outcomes.
+
+---
+
+## Data Availability
+
+Patient-level clinical data cannot be publicly shared because of privacy, ethical, and regulatory restrictions.
+
+The MIMIC-IV database is available through PhysioNet credentialed access.
+
+Aggregated study outputs and documentation are provided to support transparency and reproducibility.
+
+---
+
+## Reproducibility
+
+This repository contains:
+
+* Documentation of analytical workflows
+* Variable definitions
+* Model performance summaries
+* Reproducibility materials
+
+No identifiable patient information is included.
+
+---
+
+## Disclaimer
+
+This repository is intended for academic and research purposes only.
+
+The predictive models described are investigational and should not be used for clinical decision-making without prospective validation and regulatory approval.
+
+---
+
+## License
+
+MIT License
 
 
