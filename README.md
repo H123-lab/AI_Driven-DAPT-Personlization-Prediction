@@ -74,9 +74,7 @@ Defined according to:
 
 ## Model Explainability
 
-Model interpretability was evaluated using:
-
-* SHapley Additive exPlanations (SHAP)
+Model interpretability was evaluated SHAP_Global_Feature:
 
 Analyses included:
 
