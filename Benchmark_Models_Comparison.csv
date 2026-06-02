@@ -1,0 +1,6 @@
+| Model               | Outcome  | AUROC |
+| ------------------- | -------- | ----- |
+| LightGBM            | Ischemic | 0.84  |
+| Logistic Regression | Ischemic | 0.56  |
+| Random Forest       | Ischemic | 0.72  |
+| Neural Network      | Ischemic | 0.75  |
