@@ -1,0 +1,15 @@
+{
+"model": "Weighted LightGBM",
+"task": ["Ischemic Risk", "Bleeding Risk"],
+"training_cohort": "UAE PCI cohort (n=4812)",
+"external_validation": "MIMIC-IV (n=3406)",
+"internal_AUROC": {
+"ischemic": 0.87,
+"bleeding": 0.85
+},
+"external_AUROC": {
+"ischemic": 0.84,
+"bleeding": 0.82
+},
+"notes": "Model trained with class weighting and cross-validation"
+}
