@@ -126,6 +126,16 @@ Economic findings are based on modeled projections and not prospective intervent
 
 ---
 
+## External Validation (MIMIC-IV)
+
+External validation was performed using the MIMIC-IV database (PhysioNet credentialed access), which represents an independent critical care cohort distinct from the UAE PCI development cohort.
+
+The model was applied without recalibration to assess transportability across heterogeneous clinical settings.
+
+Performance metrics including AUROC, calibration slope, calibration intercept, and decision curve analysis were computed independently in the external cohort.
+
+---
+
 ## Data Availability
 
 Patient-level clinical data cannot be publicly shared because of privacy, ethical, and regulatory restrictions.
