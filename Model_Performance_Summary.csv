@@ -1,0 +1,13 @@
+Model,Outcome,Internal_AUROC,External_AUROC
+Weighted_LightGBM,Ischemic,0.87,0.84
+Weighted_LightGBM,Bleeding,0.85,0.82
+Logistic_Regression,Ischemic,0.58,0.56
+Logistic_Regression,Bleeding,0.83,0.80
+Random_Forest,Ischemic,0.74,0.71
+Random_Forest,Bleeding,0.78,0.75
+Neural_Network,Ischemic,0.76,0.73
+Neural_Network,Bleeding,0.79,0.77
+PRECISE_DAPT,Ischemic,,0.70
+PRECISE_DAPT,Bleeding,,0.73
+DAPT_Score,Ischemic,,0.68
+DAPT_Score,Bleeding,,0.66
