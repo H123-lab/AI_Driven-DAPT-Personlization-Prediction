@@ -142,6 +142,55 @@ The MIMIC-IV database is available through PhysioNet credentialed access.
 
 Aggregated study outputs and documentation are provided to support transparency and reproducibility.
 
+We provide the requested information regarding the data sources used in this study.
+ 
+1. MIMIC-IV dataset
+ 
+The external validation cohort was obtained from the Medical Information Mart for Intensive Care IV (MIMIC-IV) database.
+ 
+Dataset:
+Medical Information Mart for Intensive Care IV (MIMIC-IV)
+ 
+Access platform:
+PhysioNet Credentialed Health Data Access framework
+ 
+Dataset access link:
+https://physionet.org/content/mimiciv/
+ 
+Data governance authority:
+PhysioNet Credentialed Health Data Access
+ 
+Contact email:
+[physionet-support@mit.edu]
+ 
+Access to MIMIC-IV requires completion of the required training, credentialing process, and approval through PhysioNet due to the inclusion of sensitive de-identified clinical information.
+ 
+2. UAE dataset
+ 
+The UAE dataset referenced in the manuscript was obtained from the Bayanat Open Data Portal.
+ 
+Dataset:
+“Prevalence of Obesity in the UAE”
+ 
+Source:
+Bayanat Open Data Portal
+ 
+Access link:
+https://data.bayanat.ae
+ 
+This dataset is publicly available under the data-sharing policies of the Bayanat Open Data Portal and therefore does not require institutional data governance approval for access.
+
+Institutional data governance authority (UAE development cohort):
+Ministry of Health and Prevention (MOHAP), United Arab Emirates
+Website: https://mohap.gov.ae
+General contact email: info@mohap.gov.ae
+
+Institutional data governance authority (MIMIC-IV external validation cohort):
+PhysioNet Credentialed Health Data Access Framework
+Dataset: Medical Information Mart for Intensive Care IV (MIMIC-IV)
+Dataset page: https://physionet.org/content/mimiciv/
+Support email: physionet-support@mit.edu
+
 ---
 
 ## Reproducibility
